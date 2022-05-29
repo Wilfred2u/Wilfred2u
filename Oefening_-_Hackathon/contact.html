@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Ervoor zorgen dat de content op verschillende schermen goed wordt weergegeven -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zelf bier brouwen</title>
+    <!-- Een google font importeren -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
+    <!-- CSS-stylesheet importeren -->
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+
+<body>
+    <div class="parentgrid">
+        <header>
+            <div class="parentflex1">
+                <span>zelf bier brouwen</span>
+            </div>
+            <nav>
+                <div class="parentflex2">
+                    <span><a href="index.html" title="naar homepage">Home</a></span>
+                    <span><a href="#" title="naar wie zijn wij?">Over ons</a></span>
+                    <span><a href="info.html" title="naar meer informatie">Informatie</a></span>
+                    <span><a href="#" title="naar het blog">Blog</a></span>
+                    <span><a href="webshop.html" title="naar de webshop">Webshop</a></span>
+                    <span><a href="#" title="naar de agenda">Agenda</a></span>
+                    <span><a href="contact.html" title="naar contactgegevens">Contact</a></span>
+                </div>
+            </nav>
+        </header>
+        <main>
+            <h1>Contactgegevens</h1>
+            <p class="main_content1">Vul hieronder uw gegevens in zodat we u informatie toe kunnen sturen.</p>
+            <form name="contact-data" method="POST">
+                <ul>
+                    <li>
+                        <input type="radio" id="gender_man" name="box_gender" value="man" />
+                        <label for="gender_man" class="box_gender">Dhr.</label>
+                        <input type="radio" id="gender_woman" name="box_gender" value="woman" />
+                        <label for="gender_woman" class="box_gender">Mevr.</label>
+                    </li>
+                    <li>
+                        <label for="first_name">Naam:</label>
+                        <input type="text" id="first_name">
+                    </li>
+                    <li>
+                        <label for="last_name">Achternaam:</label>
+                        <input type="text" id="last_name">
+                    </li>
+                    <li>
+                        <label for="adres">Adres:</label>
+                        <input type="text" id="adress">
+                    </li>
+                    <li>
+                        <label for="house_number">Huisnummer:</label>
+                        <input type="text" id="house_number">
+                    </li>
+                    <li>
+                        <label for="postal_code">Postcode:</label>
+                        <input type="text" id="postal_code">
+                    </li>
+                    <li>
+                        <label for="city">Plaatsnaam:</label>
+                        <input type="text" id="city">
+                    </li>
+                    <li>
+                        <label for="email">E-mail:</label>
+                        <input type="email" id="email">
+                    </li>
+                    <p class="main_content1">Welk bier geniet uw voorkeur?</p>
+                    <li>
+                        <input type="checkbox" id="pils" name="beer_preference" />
+                        <label for="pils" class="main_content3">Pils</label><br />
+                        <input type="checkbox" id="blond" name="beer_preference" />
+                        <label for="blond" class="main_content3">Blond</label><br />
+                        <input type="checkbox" id="witbier" name="beer_preference" />
+                        <label for="witbier" class="main_content3">Witbier</label><br />
+                        <input type="checkbox" id="weizen" name="beer_preference" />
+                        <label for="weizen" class="main_content3">Weizen</label><br />
+                        <input type="checkbox" id="ipa" name="beer_preference" />
+                        <label for="ipa" class="main_content3">IPA</label>
+                    </li>
+                    <p class="main_content1">Heeft u nog aanvullende vragen of suggesties?</p>
+                    <li>
+                        <textarea name="tekstveld" id="message"></textarea>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="newsletter" name="newsletter" checked>
+                        <label for="newsletter" class="main_content3">Ja, ik wil graag de digitale nieuwsbrief
+                            ontvangen.</label>
+                    </li>
+                    <li>
+                        <input type="submit" value="Versturen">
+                        <input type="reset" value="Invoer wissen">
+                    </li>
+                </ul>
+            </form>
+        </main>
+        <section class="section_left">
+            <div class="quote">
+                <p class="quote1">"Lorem ipsum dolor sit amet, consectetur adipisicing elit."</p>
+                <p class="quote2">- Einstein</p>
+            </div>
+        </section>
+        <section class="section_right">
+            <h1>Lorem</h1>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi consectetur ex
+                officia architecto, sed ipsa accusamus perferendis earum dolor repudiandae exercitationem nemo possimus,
+                repellat amet adipisci quis enim quod laboriosam.
+            </p>
+        </section>
+    </div>
+</body>
+
+</html>

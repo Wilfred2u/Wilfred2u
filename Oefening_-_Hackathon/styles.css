@@ -1,0 +1,382 @@
+html,
+body {
+    /* de html- en body-marges op 0 zetten, zodat er geen witruimte overblijft: */
+    margin: 0px;
+}
+
+.parentgrid {
+    /* toepassen van CSS-grid en basis-layout opmaken: */
+    display: grid;
+    grid-template: 300px 1fr 1fr / 1fr 1fr;
+    grid-template-areas:
+        "header header"
+        "main main"
+        "section_left section_right";
+    /* zichtbare hoogte op 100% zetten: */
+    height: 100vh;
+}
+
+header {
+    /* header als grid-item definiëren: */
+    grid-area: header;
+    /* de header fixeren: */
+    position: sticky;
+    /* de verticale positie van de header definiëren: */
+    top: 0;
+}
+
+.parentflex1 {
+    /* toepassen van flexbox en basis-layout opmaken: */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* achtergrond-afbeelding voor de header toevoegen */
+    background-image: url('bier_background.jpg');
+    width: 100%;
+    height: 190px;
+    /* achtergrond-afbeelding laten schalen waarbij het hele <div>-element gevuld blijft */
+    background-size: cover;
+}
+
+.parentflex1 span {
+    border: 6px solid #333;
+    /* de tekst verticaal op juiste hoogte zetten: */
+    padding: 0px 15px 15px;
+    /* de breedte aan de inhoud aanpassen: */
+    width: fit-content;
+    /* de tekst opmaken: */
+    font-size: 3em;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+    font-variant: small-caps;
+    text-align: center;
+    background-color: rgb(239, 239, 239, 0.65);
+    color: #333;
+}
+
+nav {
+    /* het <nav>-element opmaken: */
+    background-color: #efefef;
+    height: 110px;
+}
+
+.parentflex2 {
+    /* toepassen van flexbox en basis-layout opmaken: */
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-items: center;
+    height: 100%;
+    margin: 0px;
+    padding: 0px 24px 0px;
+}
+
+.parentflex2 span {
+    flex-basis: 25%;
+}
+
+.parentflex2 span a {
+    /* de tekst opmaken: */
+    font-size: 1.25em;
+    font-family: 'Oswald', sans-serif;
+    color: #333;
+}
+
+main {
+    /* main als grid-item definiëren: */
+    grid-area: main;
+    /* het <main>-element opmaken: */
+    background-color: #cdcdcd;
+    border-bottom: 8px solid #efefef;
+    margin: 0px;
+    padding: 8px;
+}
+
+main a {
+    /* de tekst opmaken: */
+    padding: 0px 0px 0px 10px;
+    font-size: 1.125em;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 500;
+    color: #333;
+}
+
+h1 {
+    margin: 0px;
+    padding: 0px;
+    width: fit-content;
+    font-size: large;
+    font-family: Oswald, sans-serif;
+    color: #333;
+}
+
+.parentflex3 {
+    /* toepassen van flexbox en basis-layout opmaken: */
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    gap: 10px;
+    margin: 0px;
+    padding: 0px;
+}
+
+.main_content1 {
+    /* de tekst opmaken: */
+    margin: 16px 0px 0px;
+    font-size: 1em;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #333;
+}
+
+.main_content2 {
+    margin: 20px 0px 0px;
+    text-align: center;
+}
+
+.main_content2 img {
+    height: 80%;
+    width: 80%;
+    margin: 2px 0px 8px;
+}
+
+.main_content3 {
+    display: inline-block;
+    width: 80%;
+}
+
+.webshop {
+    margin: 8px 8px 0px;
+}
+
+.webshop p {
+    margin: 0px 0px 20px;
+    text-align: center;
+    font-size: 1em;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 500;
+    color: #333;
+}
+
+.webshop img {
+    width: 200px;
+    margin: 0px;
+    border: 4px solid #333;
+}
+
+form ul {
+    /* de standaardwaarde van de padding op nul zetten */
+    padding: 0px;
+    margin: 0px;
+    width: 70%;
+}
+
+form ul li {
+    display: block;
+    margin: 0px 0px 6px;
+    padding: 0px;
+    font-size: 1em;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 500;
+    color: #333;
+}
+
+label {
+    display: inline-block;
+    width: 120px;
+}
+
+.box_gender {
+    display: inline-block;
+    width: 36px;
+    margin: 4px 4px 0px 0px;
+    padding: 0px;
+}
+
+input[type=submit],
+input[type=reset] {
+    background-color: #333;
+    margin: 4px 4px 0px 0px;
+    border: 0px;
+    padding: 16px 32px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #efefef;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+textarea {
+    width: 80%;
+    height: 8em;
+}
+
+.section_left {
+    /* section_left als grid-item definiëren: */
+    grid-area: section_left;
+    /* section_left opmaken: */
+    background-color: #cdcdcd;
+    border-right: 4px solid #efefef;
+}
+
+.quote {
+    /* de quote opmaken: */
+    margin: 80px 40px 0px;
+    border: 10px solid #333;
+    padding: 24px 20px;
+    background-color: #efefef;
+}
+
+.quote1 {
+    /* de quote-tekst opmaken (bovenste deel): */
+    font-size: 0.875em;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-style: italic;
+    font-weight: 500;
+    color: #333;
+}
+
+.quote2 {
+    /* de quote-tekst opmaken (onderste deel): */
+    font-size: 0.75em;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-style: normal;
+    text-align: right;
+    font-weight: 600;
+    color: #333;
+}
+
+.section_right {
+    /* section_right als grid-item definiëren: */
+    grid-area: section_right;
+    /* section_right opmaken: */
+    background-color: #cdcdcd;
+    margin: 0px;
+    border-left: 4px solid #efefef;
+    padding: 20px;
+}
+
+.section_right p {
+    /* de tekst opmaken: */
+    font-size: 1em;
+    font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
+    color: #333;
+}
+
+/* de koppelingen een over- en underline geven wanneer de muis eroverheen gaat en wanneer ze worden aangeklikt  */
+span a:link {
+    text-decoration: none;
+}
+
+span a:visited {
+    text-decoration: none;
+}
+
+span a:hover {
+    text-decoration-line: overline underline;
+}
+
+span a:active {
+    text-decoration-line: overline underline;
+}
+
+main a:link {
+    text-decoration: none;
+}
+
+main a:visited {
+    text-decoration: none;
+}
+
+main a:hover {
+    text-decoration: none;
+    color: #efefef;
+}
+
+main a:active {
+    text-decoration: none;
+    color: #cdcdcd;
+}
+
+/* tablets (landscape): */
+@media screen and (min-width:768px) {}
+
+/* desktops: */
+@media screen and (min-width:1024px) {
+    .parentgrid {
+        grid-template: 240px 1fr / 1fr 2fr 1fr;
+        grid-template-areas:
+            "header header header"
+            "section_left main section_right";
+    }
+
+    .parentflex2 {
+        /* toepassen van flexbox en basis-layout opmaken: */
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        height: 100%;
+        margin: 0px;
+        padding: 0px;
+    }
+
+    nav {
+        height: 50px;
+    }
+
+    .parentflex2 span {
+        flex-basis: auto;
+    }
+
+    .parentflex2 span a {
+        font-size: 1.375em;
+    }
+
+    h1 {
+        font-size: x-large;
+    }
+
+    main {
+        border-left: 8px solid #efefef;
+        border-right: 8px solid #efefef;
+        border-bottom: 0px;
+        padding: 20px;
+    }
+
+    ;
+}
+
+.main_content1 {
+    font-size: 1.25em;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #333;
+}
+
+.main_content2 img {
+    height: 50%;
+    width: 50%;
+    margin: 2px 0px 8px;
+}
+
+.section_left {
+    border-right: 8px solid #efefef;
+}
+
+.quote {
+    border: 8px solid #333;
+}
+
+.quote1 {
+    font-size: 1.5em;
+}
+
+.quote2 {
+    font-size: 1.125em;
+}
+
+.section_right {
+    border-left: 8px solid #efefef;
+}
+
+.section_right p {
+    font-size: 1.125em;
+}

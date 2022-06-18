@@ -1,0 +1,88 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+  background: #c3cfe2;
+  max-width: 100%;
+  overflow-x: hidden;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.testimonial {
+  margin: 20px auto;
+  width: 580px;
+  height: 100vh;
+}
+
+.testimonial__text {
+  padding: 55px;
+  background: #fff;
+  height: 68%;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+  font-size: 1.8em;
+  line-height: 1.8em;
+  letter-spacing: -1.5px;
+  color: #555;
+  -webkit-box-shadow: 0px 8px 8px 8px #bbb;
+          box-shadow: 0px 8px 8px 8px #bbb;
+}
+
+.testimonial__footer {
+  background: #686de0;
+  height: 32%;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+  -webkit-box-shadow: 0px 8px 8px 6px #bbb;
+          box-shadow: 0px 8px 8px 6px #bbb;
+  text-align: center;
+}
+
+.testimonial__footer div {
+  position: relative;
+  top: -100px;
+}
+
+.testimonial__footer div img {
+  border: 8px solid #fff;
+  border-radius: 50%;
+  width: 200px;
+}
+
+.testimonial__footer div h1 {
+  font-size: 2em;
+  letter-spacing: 2.5px;
+  color: #fff;
+}
+
+.testimonial__footer div a {
+  font-size: 1.75em;
+  text-decoration: none;
+}
+
+.testimonial__footer div a:link {
+  color: #b4b4eb;
+}
+
+.testimonial__footer div a:visited {
+  color: #b4b4eb;
+}
+
+.testimonial__footer div a:hover {
+  color: #fff;
+}
+
+.testimonial__footer div a:active {
+  color: #000;
+}
+
+@media screen and (max-width: 400px) {
+  .testimonial {
+    overflow-x: visible;
+  }
+}
+/*# sourceMappingURL=styles.css.map */

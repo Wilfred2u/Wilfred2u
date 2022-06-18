@@ -1,0 +1,128 @@
+// Universal settings
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+// Mixins and color settings
+@import 'constants';
+
+// Body settings
+body {
+    background: $backgroundColor;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+// Main settings
+main {
+    width: 100%;
+    height: 60vh;
+}
+
+// Footer settings
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+// General button specifications
+.blog,
+.twitter,
+.linkedin,
+.facebook,
+.github {
+
+    &__link {
+
+        &:link,
+        &:visited,
+        &:hover,
+        &:active {
+            @include links();
+        }
+    }
+
+    &__icon {
+        @include icons();
+    }
+
+    &:hover {
+        @include buttons_hover();
+    }
+}
+
+// Specific button specifications
+.blog {
+    @include buttons();
+    background: $blogBackgroundColor;
+
+    &__icon {
+        &::before {
+            content: "\f5fc";
+            position: relative;
+            left: -50px;
+        }
+    }
+}
+
+.twitter {
+    @include buttons();
+    background: $twitterBackgroundColor;
+
+    &__icon {
+        &::before {
+            content: "\f099";
+            position: relative;
+            left: -40px;
+        }
+    }
+}
+
+.linkedin {
+    @include buttons();
+    background: $linkedinBackgroundColor;
+
+    &__icon {
+        &::before {
+            content: "\f0e1";
+            position: relative;
+            left: -40px;
+        }
+    }
+}
+
+.facebook {
+    @include buttons();
+    background: $facebookBackgroundColor;
+
+    &__icon {
+        &::before {
+            content: "\f39e";
+            position: relative;
+            left: -30px;
+        }
+    }
+}
+
+.github {
+    @include buttons();
+    background: $githubBackgroundColor;
+
+    &__icon {
+        &::before {
+            content: "\f09b";
+            position: relative;
+            left: -30px;
+        }
+    }
+}
+
+@media screen and (max-width:400px) {
+    body {
+        overflow-x: visible;
+    }
+
+}

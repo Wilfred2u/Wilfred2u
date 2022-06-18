@@ -1,0 +1,26 @@
+// Define mixins
+@mixin grid_item {
+    height: 100%;
+    width: 100%;
+    border-radius: 10%;
+}
+
+@mixin overlay {
+    position: absolute;
+    top: 0px;
+    opacity: 0;
+    transition: .2s ease-in;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $overlayColor;
+}
+
+@mixin overlay_hover {
+    opacity: 1;
+}
+
+// Color settings
+$backgroundColor: #c3cfe2;
+$textLinkColor: black;
+$overlayColor: #333;

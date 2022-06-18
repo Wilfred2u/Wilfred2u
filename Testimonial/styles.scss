@@ -1,0 +1,88 @@
+// Universal settings
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+// Color settings
+@import 'colors';
+
+// Body section
+body {
+    background: $bodyBackgroundColor;
+    max-width: 100%;
+    overflow-x: hidden;
+    font-family: 'Open Sans', sans-serif;
+}
+
+// Testimonial section
+.testimonial {
+    margin: 20px auto;
+    width: 580px;
+    height: 100vh;
+
+    // Upper part
+    &__text {
+        padding: 55px;
+        background: $textBackgroundColor;
+        height: 68%;
+        border-top-left-radius: 30px;
+        border-top-right-radius: 30px;
+        font-size: 1.8em;
+        line-height: 1.8em;
+        letter-spacing: -1.5px;
+        color: $textColor;
+        box-shadow: 0px 8px 8px 8px $boxShadowColor;
+    }
+
+    // Lower part
+    &__footer {
+        background: $footBackgroundColor;
+        height: 32%;
+        border-bottom-left-radius: 30px;
+        border-bottom-right-radius: 30px;
+        box-shadow: 0px 8px 8px 6px $boxShadowColor;
+        text-align: center;
+    }
+
+    &__footer div {
+        position: relative;
+        top: -100px;
+    }
+
+    &__footer div img {
+        border: 8px solid $footBorderColor;
+        border-radius: 50%;
+        width: 200px;
+    }
+
+    &__footer div h1 {
+        font-size: 2em;
+        letter-spacing: 2.5px;
+        color: $h1Color;
+    }
+
+    &__footer div a {
+        font-size: 1.75em;
+        text-decoration: none;
+
+        &:link {
+            color: $linkvisitedColor;
+        }
+
+        &:visited {
+            color: $linkvisitedColor;
+        }
+
+        &:hover {
+            color: $hoverColor;
+        }
+
+        &:active {
+            color: $activeColor;
+        }
+    }
+}
+
+@import 'mq';

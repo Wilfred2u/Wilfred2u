@@ -1,0 +1,37 @@
+//Color settings
+$backgroundColor: #c3cfe2;
+$blogBackgroundColor: #e17b77;
+$twitterBackgroundColor: #00aced;
+$linkedinBackgroundColor: #007bb6;
+$facebookBackgroundColor: #3b5998;
+$githubBackgroundColor: #333;
+$linkColor: #fff;
+
+//Button settings
+@mixin buttons {
+    padding-top: 10px;
+    padding-right: 15px;
+    width: 240px;
+    height: 50px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: .9em;
+    text-align: right;
+    position: relative;
+    right: -175px;
+    transition: transform 500ms ease-in-out;
+}
+
+@mixin links {
+    color: $linkColor;
+}
+
+
+@mixin icons {
+    font-size: 2em;
+    color: $linkColor;
+}
+
+//Button-hover settings
+@mixin buttons_hover {
+    transform: translateX(-175px);
+}

@@ -1,0 +1,167 @@
+// Universal settings
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+// Mixins and color settings
+@import 'constants';
+
+// Body section
+body {
+    background: $backgroundColor;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+// Grid settings
+main {
+    margin: 0px auto;
+    padding: 20px 0px;
+    width: 70%;
+    position: relative;
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-areas: "item1 item2 item3"
+        "item4 item5 item6"
+        "item7 . . ";
+}
+
+// Item settings
+.item1 {
+
+    &__photo1,
+    &__overlay1 {
+        grid-area: item1;
+        @include grid_item();
+    }
+
+    &__overlay1 {
+        @include overlay();
+    }
+
+    &:hover &__overlay1 {
+        @include overlay_hover();
+    }
+}
+
+.item2 {
+
+    &__photo2,
+    &__overlay2 {
+        grid-area: item2;
+        @include grid_item();
+    }
+
+    &__overlay2 {
+        @include overlay();
+    }
+
+    &:hover &__overlay2 {
+        @include overlay_hover();
+    }
+}
+
+.item3 {
+
+    &__photo3,
+    &__overlay3 {
+        grid-area: item3;
+        @include grid_item();
+    }
+
+    &__overlay3 {
+        @include overlay();
+    }
+
+    &:hover &__overlay3 {
+        @include overlay_hover();
+    }
+}
+
+.item4 {
+
+    &__photo4,
+    &__overlay4 {
+        grid-area: item4;
+        @include grid_item();
+    }
+
+    &__overlay4 {
+        @include overlay();
+    }
+
+    &:hover &__overlay4 {
+        @include overlay_hover();
+    }
+}
+
+.item5 {
+
+    &__photo5,
+    &__overlay5 {
+        grid-area: item5;
+        @include grid_item();
+    }
+
+    &__overlay5 {
+        @include overlay();
+    }
+
+    &:hover &__overlay5 {
+        @include overlay_hover();
+    }
+}
+
+.item6 {
+
+    &__photo6,
+    &__overlay6 {
+        grid-area: item6;
+        @include grid_item();
+    }
+
+    &__overlay6 {
+        @include overlay();
+    }
+
+    &:hover &__overlay6 {
+        @include overlay_hover();
+    }
+}
+
+.item7 {
+
+    &__photo7,
+    &__overlay7 {
+        grid-area: item7;
+        @include grid_item();
+    }
+
+    &__overlay7 {
+        @include overlay();
+    }
+
+    &:hover &__overlay7 {
+        @include overlay_hover();
+    }
+}
+
+button {
+    border: 0px;
+    border-radius: 6px;
+    padding: 8px 12px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.125em;
+}
+
+a {
+    text-decoration: none;
+    color: $textLinkColor;
+}
+
+// Media queries
+@import 'mqueries';
